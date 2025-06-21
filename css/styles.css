@@ -1,0 +1,463 @@
+/*html { width: 900px; }
+body { font-family: Arial, Tahoma; font-size: 13px; color: Black; width: 900px; }*/
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins Regular'), local('Poppins-Regular'), url('fonts/Poppins-Regular.woff2') format('woff2'), url('fonts/Poppins-Regular.woff') format('woff'), url('fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Madani Arabic';
+    src: local('Madani Arabic Regular'), local('Madani-Arabic-Regular'), url('fonts/MadaniArabic-Regular.woff2') format('woff2'), url('fonts/MadaniArabic-Regular.woff') format('woff'), url('fonts/MadaniArabic-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: 10px auto;
+}
+
+body {
+    display: table-cell;
+    font-family: 'Poppins', 'Madani Arabic', Arial, Tahoma;
+    font-size: 13px;
+    color: Black;
+    width: 980px;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid #002D58;
+    padding: 3px;
+    font-family: Arial, Tahoma;
+}
+
+h1 {
+    font-size: 1.4em;
+    padding: 10px 0 0 0px;
+}
+
+h2 {
+    font-size: 1.2em;
+    padding: 10px 0 0 0px;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.2em;
+    padding: 10px 0 10px 0px;
+    margin: 0px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a {
+    color: #002D58;
+    font-weight: bold;
+}
+
+fieldset {
+    width: 960px;
+    line-height: 1.5em;
+    margin: 0px;
+    border: 1px solid #002D58;
+}
+
+hr {
+    border-top: 1px dashed #002D58;
+}
+
+legend {
+    font-size: 13px;
+    font-weight: bold;
+    color: #002D58;
+    padding-bottom: 5px;
+}
+
+.invitation {
+    width: 754px;
+    border: 1px solid;
+    overflow: hidden;
+}
+
+.invitation .inner {
+    text-align: center;
+    margin: 20px;
+}
+
+.radio {
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.notification {
+    color: Red;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+
+.withBorder {
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.black {
+    color: black;
+}
+
+a.boldLink {
+    font-size: 14px;
+    background-color: #002D58;
+    color: White;
+    padding: 5px;
+    font-weight: normal;
+}
+
+a.boldLink:hover {
+    text-decoration: none;
+}
+
+/* For pages done by Rami */
+
+.RedTxt {
+    color: Red;
+}
+
+.SmallTxt {
+    font-size: smaller;
+}
+
+.WideTextBox {
+    width: 200px;
+    margin-right: 10px;
+}
+
+.TempPassDiv {
+    margin: 20px 0 0 50px;
+}
+
+.Hidden {
+    display: none;
+}
+
+.LoadingText {
+    color: green;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.BoldTxt {
+    font-weight: bold;
+}
+
+.tbl {
+    border-top: 1px solid #002D58;
+    border-right: 1px solid #002D58;
+}
+
+.tbl th {
+    background-color: #002D58;
+    color: White;
+}
+
+.tbl tr {
+    text-align: center;
+    color: #002D58;
+}
+
+.tbl tr:nth-child(even) {
+    background-color: White;
+}
+
+.tbl tr:nth-child(odd) {
+    background-color: #6DB1E2;
+}
+
+.tbl th,
+.tbl td {
+    border-bottom: 1px solid #002D58;
+    border-left: 1px solid #002D58;
+}
+
+.tbl td a {
+    font-weight: normal;
+}
+
+.error-msg {
+    color: Red;
+    font-weight: bold;
+}
+
+.success-msg {
+    color: Green;
+    font-weight: bold;
+}
+
+.copyright {
+    padding-top: 10px;
+    font-size: 11px;
+    font-style: italic;
+    width: 900px;
+    text-align: center;
+}
+
+.panel {
+    border: 1px dashed #002D58;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.panel-margin {
+    margin: 15px 5px 5px 5px;
+}
+
+.panelheader {
+    color: #002D58;
+    font-weight: bold;
+    border-bottom: 1px dashed #F3B200;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.legend {
+    font-size: .8em;
+    padding: 10px 0;
+    font-style: italic;
+}
+
+.NormGrid {
+    width: 100%;
+    margin: 0 0 10px 0;
+    border: solid 1px #002D58;
+    border-collapse: collapse;
+    font-size: 1em;
+}
+
+.NormGrid td {
+    padding: 1px;
+    border: solid 1px #002D58;
+    color: #002D58;
+    text-align: center;
+}
+
+.NormGrid th,
+.NormGrid .header td {
+    padding: 5px 2px;
+    background: #002D58;
+    border-left: solid 1px #002D58;
+    color: #fff;
+    font-weight: bold;
+}
+
+.NormGrid th a,
+.NormGrid th a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.NormGrid .alt {
+    /*background: #6DB1E2;*/
+    background: #E8E6DF;
+}
+
+.NormGrid .selected {
+    /*background: #194C44;*/
+    background: #6DB1E2;
+}
+
+/*.NormGrid .selected td {
+            color: #fff;
+        }*/
+
+.NormGrid .cancelled {
+    background: #A64167;
+}
+
+.NormGrid .reserved {
+    /*background: #194C44;*/
+    background: #6DB1E2;
+}
+
+/*.NormGrid .reserved td {
+        color: #fff;
+    }*/
+
+.NormGrid tr.RedRow td {
+    color: red;
+}
+
+.NormGrid .pgr {
+    /*background: #5CBDB1;*/
+    background: #194C44;
+}
+
+.NormGrid .pgr table {
+    margin: 2px 0;
+}
+
+.NormGrid .pgr table td {
+    border-width: 0;
+    padding: 0 6px;
+    border-left: solid 1px #fff;
+    font-weight: bold;
+    /*font-size: 11px;*/
+    text-align: right;
+    color: #F3B200;
+}
+
+.NormGrid .pgr a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.NormGrid .pgr a:hover {
+    color: #F3B200;
+    text-decoration: underline;
+}
+
+#divMsg {
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.ar-direction {
+    direction: rtl;
+}
+
+.ar-font {
+    font-family: 'Madani Arabic', Tahoma;
+}
+
+.red-color {
+    color: red;
+}
+
+input[type=submit] {
+    background-color: #002D58;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.navy-bgcolor {
+    background-color: #002D58;
+}
+
+.navy-color {
+    color: #002D58;
+}
+
+.off_white-bgcolor {
+    background-color: #E8E6DF;
+}
+
+.off_white-color {
+    color: #E8E6DF;
+}
+
+.forrest_green-bgcolor {
+    background-color: #194C44;
+}
+
+.forrest_green-color {
+    color: #194C44;
+}
+
+.rich_red-bgcolor {
+    background-color: #A11A16;
+}
+
+.rich_red-color {
+    color: #A11A16;
+}
+
+.sky_blue-bgcolor {
+    background-color: #6DB1E2;
+}
+
+.sky_blue-color {
+    color: #6DB1E2;
+}
+
+.sky_blue-border_dashed_1px {
+    border: dashed 1px #6DB1E2;
+}
+
+.sky_blue-table_border_color th,
+.sky_blue-table_border_color td {
+    border-color: #6DB1E2;
+}
+
+.sky_blue-table_border_solid_1px th,
+.sky_blue-table_border_solid_1px td {
+    border: solid 1px #6DB1E2;
+}
+
+.deep_yellow-bgcolor {
+    background-color: #F3B200;
+}
+
+.deep_yellow-color {
+    color: #F3B200;
+}
+
+.petroleum_blue-bgcolor {
+    background-color: #5CBDB1;
+}
+
+.petroleum_blue-color {
+    color: #5CBDB1;
+}
+
+.rich_green-bgcolor {
+    background-color: #007635;
+}
+
+.rich_green-color {
+    color: #007635;
+}
+
+.pale_burgundy-bgcolor {
+    background-color: #A64167;
+}
+
+.pale_burgundy-color {
+    color: #A64167;
+}
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: auto auto;
+    padding-top: 20px;
+}
+
+.grid-item {
+    border: 1px dashed #002D58;
+    padding: 0px 20px 10px 20px;
+    margin-bottom: 20px;
+    width: 438px;
+}
